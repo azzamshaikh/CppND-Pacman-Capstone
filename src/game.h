@@ -28,11 +28,9 @@ private:
 
     int score{ 0 };
 
-    void CreateFood();
-    void Eat();
-    void PlaceFood();
-    void Update();
-    void Replay();
+    void CreateFood();  // create food that is placed onto the screen
+    void Update();      // update the data to be passed onto rendering
+    void Replay();      // menu for player to choose what they want to do next
     bool ans;
 
 
