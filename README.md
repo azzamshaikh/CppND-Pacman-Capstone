@@ -1,12 +1,26 @@
-# CPPND: Capstone Snake Game Example
+# CPPND: Capstone Pacman Game 
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
+This is my capstone project for the Udacity C++ Nanodegree Program. The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses. I used the code and adjusted it to create a simple Pacman style game.
 
 <img src="snake_game.gif"/>
 
-The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
+The Capstone Project is a primitive version of the classic game Pacman. While this game does not have anyone to run from, it does have a vital feature from the original game: food. When this game begins, it will randomly place 15 snacks across the window and the players objective is to eat them all! Once all snacks have been devoured, the game will end and you can choose to play again or quit the game. 
 
-In this project, you can build your own C++ application or extend this Snake game, following the principles you have learned throughout this Nanodegree Program. This project will demonstrate that you can independently create applications using a wide range of C++ features.
+In accordance with the capstone rubric, the following critera was satisifed within my project:
+* Loops, Functions, I/O:
+  * The project demonstrates an understanding of C++ functions and control structures
+    -> My project features a variety of control structures such as [for loops](https://github.com/azzamshaikh/CppND-Pacman-Capstone/blob/94d03aeb44f1c3b812b600f8a4e7a9f56af2561f/src/game.cpp#L81), [switch cases](https://github.com/azzamshaikh/CppND-Pacman-Capstone/blob/94d03aeb44f1c3b812b600f8a4e7a9f56af2561f/src/startup.cpp#L23), and [if/else statements](https://github.com/azzamshaikh/CppND-Pacman-Capstone/blob/94d03aeb44f1c3b812b600f8a4e7a9f56af2561f/src/game.cpp#L117). In addition, the project code is organized into functions such as [Game::CreateFood()](https://github.com/azzamshaikh/CppND-Pacman-Capstone/blob/94d03aeb44f1c3b812b600f8a4e7a9f56af2561f/src/game.cpp#L78) and [Game::Replay()](https://github.com/azzamshaikh/CppND-Pacman-Capstone/blob/94d03aeb44f1c3b812b600f8a4e7a9f56af2561f/src/game.cpp#L110).
+  * The project accepts user input and processes the input
+    -> Upon start up, the game asks the user [what they want to do](https://github.com/azzamshaikh/CppND-Pacman-Capstone/blob/94d03aeb44f1c3b812b600f8a4e7a9f56af2561f/src/startup.cpp#L17) and the game processes the input. In addition, after completing the game, the user is asked if they want to [play again](https://github.com/azzamshaikh/CppND-Pacman-Capstone/blob/94d03aeb44f1c3b812b600f8a4e7a9f56af2561f/src/game.cpp#L110).
+* Object Oriented Programming 
+  * The project uses OOP techniques
+    -> The game contains multiple classes to complete different functionality like controlling and rendering. I created a class that was responsible for the [boot options](https://github.com/azzamshaikh/CppND-Pacman-Capstone/blob/master/src/startup.cpp) that is started upon game launch.
+  * Classes use appropriate access specifiers for class members
+    -> Each class contains appropriate access specifiers for class members.
+  * Classes abstract implementation details from their interfaces
+    -> All class member functions have documented effects via name and comments.
+    
+The prebuilt SnakeGame also featured a variety of memory management techniques regarding use of references that were kept in my version.
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
@@ -28,4 +42,4 @@ In this project, you can build your own C++ application or extend this Snake gam
 1. Clone this repo.
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run it: `./SnakeGame`.
+4. Run it: `./PacmanGame`.
